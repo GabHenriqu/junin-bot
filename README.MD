@@ -1,4 +1,4 @@
-# 🤖 Juninho Bot
+# Juninho Bot
 
 [![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](LICENSE)
 [![Discord.js](https://img.shields.io/badge/discord.js-v14-blue.svg)](https://discord.js.org/)
