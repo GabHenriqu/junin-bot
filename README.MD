@@ -1,75 +1,126 @@
-# Juninho Bot
+# 🤖 Juninho Bot
 
-Um bot de Discord que utiliza LLM (Llama 3) via Ollama para interagir com usuários, com sistema de memória.
+[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](LICENSE)
+[![Discord.js](https://img.shields.io/badge/discord.js-v14-blue.svg)](https://discord.js.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-16%2B-brightgreen)](https://nodejs.org/)
 
-## Recursos
+Um bot de Discord inteligente e personalizado que utiliza Large Language Models (LLM) através do [Ollama](https://ollama.ai/) para criar interações naturais com usuários, equipado com um sistema de memória persistente.
 
-- Conversa natural usando LLM via Ollama
-- Sistema de memória persistente para lembrar informações de usuários
-- Comandos simples e intuitivos
-- Configuração fácil
+![Juninho Bot Banner](https://via.placeholder.com/800x200?text=Juninho+Bot)
 
-## Comandos
+## ✨ Recursos
 
-- `!junin <mensagem>` – Fala com o Juninho
-- `!junin lembrar <informação>` – Faz o Juninho guardar algo importante sobre você
-- `!junin memórias` – Mostra tudo que o Juninho guardou sobre você
-- `!junin esquecer <número>` – Apaga uma memória específica
-- `!junin reset` – Apaga todo o histórico e memórias
-- `!junin comandos` – Mostra a lista de comandos disponíveis
+- 💬 **Conversa Natural** - Interações fluidas e contextuais usando Llama 3 via Ollama
+- 🧠 **Sistema de Memória** - Armazena e recupera informações sobre os usuários
+- 🚀 **Fácil de Usar** - Comandos intuitivos e interface amigável
+- ⚙️ **Altamente Configurável** - Adapte o comportamento do bot às necessidades do seu servidor
+- 🔒 **Seguro** - Processamento local de LLM para maior privacidade dos dados
 
-## Configuração
+## 📋 Comandos
 
-### Requisitos
+| Comando | Descrição |
+|---------|-----------|
+| `!junin <mensagem>` | Inicia uma conversa com o Juninho |
+| `!junin lembrar <informação>` | Armazena uma informação importante sobre você |
+| `!junin memórias` | Exibe todas as memórias que o Juninho tem sobre você |
+| `!junin esquecer <número>` | Remove uma memória específica da lista |
+| `!junin reset` | Limpa todo o histórico de conversa e memórias |
+| `!junin comandos` | Mostra a lista completa de comandos disponíveis |
 
-- Node.js v16+
-- [Ollama](https://ollama.ai/) instalado e rodando localmente com o modelo llama3
-- Discord Bot Token
+## 🛠️ Instalação e Configuração
 
-### Instalação
+### Pré-requisitos
 
-1. Clone o repositório
-```bash
-git clone https://github.com/GabHenriqu/juninho-bot.git
-cd juninho-bot
+- [Node.js](https://nodejs.org/) v16 ou superior
+- [Ollama](https://ollama.ai/) instalado e em execução no seu ambiente
+- [Discord Bot Token](https://discord.com/developers/applications)
+- [Git](https://git-scm.com/) (opcional, para clonar o repositório)
+
+### Configuração Passo a Passo
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/GabHenriqu/juninho-bot.git
+   cd juninho-bot
+   ```
+
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
+
+3. **Configure o ambiente**
+   ```bash
+   # Copie o arquivo de exemplo
+   cp .env.example .env
+   
+   # Edite o arquivo .env com seu editor favorito
+   # Adicione seu token do Discord e outras configurações
+   nano .env
+   ```
+
+4. **Configure o Ollama**
+   
+   Certifique-se de que o Ollama está instalado e baixe o modelo Llama 3:
+   ```bash
+   ollama pull llama3
+   ```
+
+5. **Inicie o bot**
+   ```bash
+   npm start
+   ```
+
+## 🏗️ Estrutura do Projeto
+
+```
+juninho-bot/
+├── src/
+│   ├── index.js         # Ponto de entrada do aplicativo
+│   ├── config.js        # Configurações e constantes
+│   ├── commands/        # Implementação dos comandos
+│   ├── events/          # Manipuladores de eventos do Discord
+│   ├── handlers/        # Processadores de eventos e comandos
+│   └── services/        # Serviços (IA, memória, etc.)
+├── .env                 # Variáveis de ambiente (não versionado)
+├── .env.example         # Exemplo de variáveis de ambiente
+├── package.json         # Dependências e scripts
+└── README.md            # Este arquivo
 ```
 
-2. Instale as dependências
-```bash
-npm install
+## 📊 Uso Avançado
+
+### Personalização do Modelo LLM
+
+O Juninho Bot é configurado para usar o modelo Llama 3 por padrão, mas você pode facilmente alterá-lo editando a configuração no arquivo `.env`:
+
+```
+OLLAMA_MODEL=llama3
 ```
 
-3. Configure o arquivo `.env`
-```bash
-# Copie o arquivo .env.example
-cp .env.example .env
-# Edite-o com seu token do Discord
-```
+### Ajustando Parâmetros de IA
 
-4. Inicie o bot
-```bash
-npm start
-```
+Você pode ajustar os parâmetros de geração de texto (temperatura, top_p, etc.) no arquivo `src/services/aiService.js`.
 
-### Configurando o Ollama
+## 🤝 Contribuindo
 
-Certifique-se de que você tem o Ollama rodando localmente e o modelo llama3 instalado:
+Contribuições são muito bem-vindas! Siga estas etapas para contribuir:
 
-```bash
-ollama pull llama3
-```
+1. Faça um fork do repositório
+2. Crie um branch para sua feature (`git checkout -b feature/nome-da-feature`)
+3. Commit suas alterações (`git commit -m 'Adiciona nova feature'`)
+4. Push para o branch (`git push origin feature/nome-da-feature`)
+5. Abra um Pull Request
 
-## Estrutura do Projeto
+## 📜 Licença
 
-O projeto está organizado em módulos para facilitar a manutenção:
+Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
 
-- `src/index.js` - Ponto de entrada
-- `src/config.js` - Configurações
-- `src/handlers/` - Manipuladores de eventos e comandos
-- `src/commands/` - Implementação dos comandos
-- `src/events/` - Manipuladores de eventos do Discord
-- `src/services/` - Serviços como IA e gerenciamento de memória
+## 📬 Contato
 
-## Contribuindo
+- **GitHub:** [GabHenriqu](https://github.com/GabHenriqu)
+- **Discord:** [gabhenrique]
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um PR ou uma issue.
+---
+
+⭐ **Gostou do Juninho Bot?** Não se esqueça de dar uma estrela no GitHub! ⭐
