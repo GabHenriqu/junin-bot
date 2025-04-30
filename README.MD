@@ -6,7 +6,7 @@
 
 Um bot de Discord inteligente e personalizado que utiliza Large Language Models (LLM) através do [Ollama](https://ollama.ai/) para criar interações naturais com usuários, equipado com um sistema de memória persistente.
 
-![Juninho Bot Banner](https://via.placeholder.com/800x200?text=Juninho+Bot)
+![Juninho Bot Banner](./images.jpg)
 
 ## ✨ Recursos
 
@@ -119,7 +119,7 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LIC
 ## 📬 Contato
 
 - **GitHub:** [GabHenriqu](https://github.com/GabHenriqu)
-- **Discord:** [gabhenrique]
+- **Discord:** gabhenrique
 
 ---
 
