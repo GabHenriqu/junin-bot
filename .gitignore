@@ -1,0 +1,22 @@
+# Dependências
+node_modules/
+
+# Arquivos de ambiente
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de memória (opcional, dependendo se você quer fazer backup ou não)
+# memory.json
+
+# Outros arquivos
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
