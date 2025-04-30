@@ -102,25 +102,9 @@ OLLAMA_MODEL=llama3
 
 Você pode ajustar os parâmetros de geração de texto (temperatura, top_p, etc.) no arquivo `src/services/aiService.js`.
 
-## 🤝 Contribuindo
-
-Contribuições são muito bem-vindas! Siga estas etapas para contribuir:
-
-1. Faça um fork do repositório
-2. Crie um branch para sua feature (`git checkout -b feature/nome-da-feature`)
-3. Commit suas alterações (`git commit -m 'Adiciona nova feature'`)
-4. Push para o branch (`git push origin feature/nome-da-feature`)
-5. Abra um Pull Request
-
-## 📜 Licença
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
-
 ## 📬 Contato
 
 - **GitHub:** [GabHenriqu](https://github.com/GabHenriqu)
 - **Discord:** gabhenrique
 
 ---
-
-⭐ **Gostou do Juninho Bot?** Não se esqueça de dar uma estrela no GitHub! ⭐
