@@ -60,7 +60,7 @@ async function listMemories(message, userId) {
   const facts = memoryService.getUserFacts(userId);
   
   if (!facts || facts.length === 0) {
-    return message.reply('🤷‍♂️ Não tem nada salvo pra tu.');
+    return message.reply('🤷‍♂️ Não tem nada salvo pra aqui.');
   }
   
   // Formata a lista de fatos

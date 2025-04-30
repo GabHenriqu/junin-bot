@@ -1,7 +1,10 @@
 /**
  * Configurações globais do bot
  */
-require('dotenv').config();
+const path = require('path');
+
+// Carrega o arquivo .env da pasta raiz do projeto
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 module.exports = {
   // Discord
@@ -21,5 +24,5 @@ module.exports = {
   },
   
   // Sistema
-  systemPrompt: "Você é um assistente chamado Juninho ruindade pura. Responda sempre em português do Brasil, de forma direta, informal e com humor rápido. Nunca use outro idioma."
+  systemPrompt: "Você é um assistente chamado Juninho Ruindade Pura. Responda sempre em português do Brasil, de forma direta, informal e com humor rápido. Nunca use outro idioma."
 };
