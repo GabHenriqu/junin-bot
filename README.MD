@@ -88,8 +88,6 @@ juninho-bot/
 └── README.md            # Este arquivo
 ```
 
-## 📊 Uso Avançado
-
 ### Personalização do Modelo LLM
 
 O Juninho Bot é configurado para usar o modelo Llama 3 por padrão, mas você pode facilmente alterá-lo editando a configuração no arquivo `.env`:
@@ -97,10 +95,6 @@ O Juninho Bot é configurado para usar o modelo Llama 3 por padrão, mas você p
 ```
 OLLAMA_MODEL=llama3
 ```
-
-### Ajustando Parâmetros de IA
-
-Você pode ajustar os parâmetros de geração de texto (temperatura, top_p, etc.) no arquivo `src/services/aiService.js`.
 
 ## 📬 Contato
 
